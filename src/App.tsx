@@ -25,45 +25,45 @@ import { useState, FormEvent } from "react";
 const AUDIT_REGISTRY_ITEMS = [
   {
     id: "p1",
-    loc: "Lekki Phase 1, Lagos",
+    loc: "",
     // Replace the URL inside the quotes with your custom image link
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80",
-    status: "Audit Safe"
+    image: "https://ik.imagekit.io/019999great/image1.jpg",
+    status: ""
   },
   {
     id: "p2",
-    loc: "Maitama, Abuja",
+    loc: "",
     // Replace the URL inside the quotes with your custom image link
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80",
-    status: "Audit Safe"
+    image: "https://ik.imagekit.io/019999great/image2.jpg",
+    status: ""
   },
   {
     id: "p3",
-    loc: "Ikeja GRA, Lagos",
+    loc: "",
     // Replace the URL inside the quotes with your custom image link
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80",
-    status: "Audit Safe"
+    status: ""
   },
   {
     id: "p4",
-    loc: "Surulere, Lagos",
+    loc: "",
     // Replace the URL inside the quotes with your custom image link
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
-    status: "Audit Safe"
+    status: ""
   },
   {
     id: "p5",
-    loc: "Epe, Lagos",
+    loc: "",
     // Replace the URL inside the quotes with your custom image link
     image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=600&q=80",
-    status: "Audit Safe"
+    status: ""
   },
   {
     id: "p6",
-    loc: "Ibadan, Oyo",
+    loc: "",
     // Replace the URL inside the quotes with your custom image link
     image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80",
-    status: "Audit Safe"
+    status: ""
   }
 ];
 
