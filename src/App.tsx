@@ -94,7 +94,7 @@ export default function App() {
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-emerald-regal shadow-md shrink-0">
                   <img 
-                    src="https://picsum.photos/seed/founder-man/800/800"
+                    src="https://ik.imagekit.io/019999great/user-02.jpg"
                     alt="Founder"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
