@@ -16,7 +16,56 @@ import {
   Menu,
   X
 } from "lucide-react";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
+
+// ==========================================
+// AUDIT REGISTRY CONFIGURATION
+// ==========================================
+// You can easily change the picture URLs, locations, and status tags here.
+const AUDIT_REGISTRY_ITEMS = [
+  {
+    id: "p1",
+    loc: "Lekki Phase 1, Lagos",
+    // Replace the URL inside the quotes with your custom image link
+    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80",
+    status: "Audit Safe"
+  },
+  {
+    id: "p2",
+    loc: "Maitama, Abuja",
+    // Replace the URL inside the quotes with your custom image link
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80",
+    status: "Audit Safe"
+  },
+  {
+    id: "p3",
+    loc: "Ikeja GRA, Lagos",
+    // Replace the URL inside the quotes with your custom image link
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80",
+    status: "Audit Safe"
+  },
+  {
+    id: "p4",
+    loc: "Surulere, Lagos",
+    // Replace the URL inside the quotes with your custom image link
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+    status: "Audit Safe"
+  },
+  {
+    id: "p5",
+    loc: "Epe, Lagos",
+    // Replace the URL inside the quotes with your custom image link
+    image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=600&q=80",
+    status: "Audit Safe"
+  },
+  {
+    id: "p6",
+    loc: "Ibadan, Oyo",
+    // Replace the URL inside the quotes with your custom image link
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80",
+    status: "Audit Safe"
+  }
+];
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -26,6 +75,22 @@ const fadeIn = {
 };
 
 export default function App() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    type: ""
+  });
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent("Consultation Request: Property Investment");
+    const body = encodeURIComponent(
+      `Hello Naija Diaspora Realtors Team,\n\nI want to request a property investment consultation.\n\nInvestment Profile:\n- Name: ${formData.name}\n- Email: ${formData.email}\n- Phone: ${formData.phone}\n- Desired Investment Type: ${formData.type}\n\nPlease contact me at your earliest convenience.`
+    );
+    window.location.href = `mailto:naijadiasporarealtors@gmail.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="min-h-screen bg-white text-navy-regal flex flex-col selection:bg-orange-regal selection:text-white">
       {/* HEADER */}
@@ -192,18 +257,11 @@ export default function App() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {[
-                { loc: "Lekki Phase 1 - Oct 2025", id: "p1" },
-                { loc: "Maitama, Abuja - Oct 2025", id: "p2" },
-                { loc: "Ikeja GRA, Lagos - Oct 2025", id: "p3" },
-                { loc: "Ajah Waterfront - Sept 2025", id: "p4" },
-                { loc: "Epe Residential - Sept 2025", id: "p5" },
-                { loc: "Ibadan Court - Sept 2025", id: "p6" },
-              ].map((prop) => (
+              {AUDIT_REGISTRY_ITEMS.map((prop) => (
                 <div key={prop.id} className="relative group overflow-hidden border border-art-gray rounded-lg shadow-sm bg-[#F8FAFC]">
                   <div className="aspect-[4/3] w-full overflow-hidden bg-slate-100">
                     <img 
-                      src=https://ik.imagekit.io/019999great/image2.jpg
+                      src={prop.image}
                       alt={prop.loc}
                       className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
                       referrerPolicy="no-referrer"
@@ -211,7 +269,7 @@ export default function App() {
                   </div>
                   <div className="p-4 bg-white flex items-center justify-between border-t border-art-gray">
                     <span className="text-xs font-bold text-navy-regal tracking-tight uppercase">{prop.loc}</span>
-                    <span className="text-[9px] bg-[#E0F2FE] text-[#0369A1] font-bold px-2 py-0.5 rounded-full uppercase">Audit Safe</span>
+                    <span className="text-[9px] bg-[#E0F2FE] text-[#0369A1] font-bold px-2 py-0.5 rounded-full uppercase">{prop.status}</span>
                   </div>
                 </div>
               ))}
@@ -238,13 +296,15 @@ export default function App() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/10 text-xs">
                 <div>
                   <span className="block text-orange-regal font-bold uppercase tracking-wider mb-1">Direct Lines</span>
-                  <p className="text-white/80">+234 800 000 0000</p>
-                  <p className="text-white/60">+44 20 0000 0000</p>
+                  <p className="text-white/80">09064468706</p>
+                  <p className="text-white/60">07071969997</p>
+                  <span className="block text-emerald-regal font-bold uppercase tracking-wider mt-3 mb-1">Email Info</span>
+                  <p className="text-white/80">naijadiasporarealtors@gmail.com</p>
                 </div>
                 <div>
                   <span className="block text-emerald-regal font-bold uppercase tracking-wider mb-1">Office Location</span>
-                  <p className="text-white/80">12b Admiralty Way,</p>
-                  <p className="text-white/60">Lekki Phase 1, Lagos</p>
+                  <p className="text-white/80">63, Ogunlana Drive,</p>
+                  <p className="text-white/60">Surulere, Lagos, Nigeria</p>
                 </div>
               </div>
             </div>
@@ -255,13 +315,16 @@ export default function App() {
                 <span className="w-2 h-2 rounded-full bg-orange-regal animate-pulse" />
                 Investment Inquiry Panel
               </h3>
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
                     <label className="text-[10px] uppercase tracking-wider font-bold text-white/40">Full Name</label>
                     <input 
                       type="text" 
                       placeholder="Your Name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required
                       className="w-full bg-white/5 border border-white/10 p-3 rounded text-sm text-white outline-none focus:bg-white/10 focus:border-orange-regal transition-all placeholder:text-white/20"
                     />
                   </div>
@@ -270,6 +333,9 @@ export default function App() {
                     <input 
                       type="email" 
                       placeholder="email@address.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required
                       className="w-full bg-white/5 border border-white/10 p-3 rounded text-sm text-white outline-none focus:bg-white/10 focus:border-orange-regal transition-all placeholder:text-white/20"
                     />
                   </div>
@@ -280,6 +346,9 @@ export default function App() {
                     <input 
                       type="tel" 
                       placeholder="+1 / +44 / +234..."
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      required
                       className="w-full bg-white/5 border border-white/10 p-3 rounded text-sm text-white outline-none focus:bg-white/10 focus:border-orange-regal transition-all placeholder:text-white/20"
                     />
                   </div>
@@ -288,6 +357,9 @@ export default function App() {
                     <input 
                       type="text" 
                       placeholder="e.g. Land, Residential"
+                      value={formData.type}
+                      onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                      required
                       className="w-full bg-white/5 border border-white/10 p-3 rounded text-sm text-white outline-none focus:bg-white/10 focus:border-orange-regal transition-all placeholder:text-white/20"
                     />
                   </div>
