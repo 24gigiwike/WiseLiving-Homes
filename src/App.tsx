@@ -62,7 +62,7 @@ const AUDIT_REGISTRY_ITEMS = [
     id: "p6",
     loc: "",
     // Replace the URL inside the quotes with your custom image link
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80",
+    image: "https://ik.imagekit.io/019999great/image1.jpg",
     status: ""
   }
 ];
