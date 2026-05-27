@@ -203,7 +203,7 @@ export default function App() {
                 <div key={prop.id} className="relative group overflow-hidden border border-art-gray rounded-lg shadow-sm bg-[#F8FAFC]">
                   <div className="aspect-[4/3] w-full overflow-hidden bg-slate-100">
                     <img 
-                      src={`https://picsum.photos/seed/estate-${prop.id}/600/450`}
+                      src=https://ik.imagekit.io/019999great/image2.jpg
                       alt={prop.loc}
                       className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
                       referrerPolicy="no-referrer"
