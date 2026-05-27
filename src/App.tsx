@@ -100,16 +100,17 @@ export default function App() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <div>Vivian Ekanem</h3>
+                <div>
+                  <h3 className="text-xl font-bold text-navy-regal">Vivian Ekanem</h3>
                   <p className="text-xs font-bold uppercase tracking-wide text-emerald-regal">CEO & Co-Founder</p>
                 </div>
               </div>
               <div>
                 <p className="text-sm md:text-base leading-relaxed text-navy-regal/70 mb-4 font-light">
-                  Vivian Ekanem is the founder of Naija Diaspora Realtors, a real estate brand dedicated to helping Nigerians in the diaspora invest safely and confidently in property back home.
+                  The trust gap shouldn't stop you from building your legacy at home. We bridge that gap with radical transparency and on-ground, step-by-step physical legal audit.
                 </p>
                 <p className="text-sm md:text-base italic font-semibold text-emerald-regal border-l-2 border-emerald-regal pl-4">
-                  We are trusted for helping Nigerians in diaspora invest safely and confidently in property back home. 
+                  "I know what it's like to wire money home and worry. We built this so you never have to."
                 </p>
               </div>
             </div>
