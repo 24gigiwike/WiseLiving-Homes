@@ -32,10 +32,13 @@ export default function App() {
       <header className="h-[70px] w-full px-6 md:px-12 flex items-center justify-between border-b border-art-gray bg-white shrink-0 sticky top-0 z-50 shadow-sm/50">
         <div className="flex items-center gap-3">
           {/* Logo Placeholder combining Navy Blue, Green, and Orange */}
-          <div className="flex items-center -space-x-2 shrink-0">
-            <span className="w-5 h-5 rounded-full bg-[#0F172A] block border-2 border-white shadow-sm" />
-            <span className="w-5 h-5 rounded-full bg-[#064E3B] block border-2 border-white shadow-sm" />
-            <span className="w-5 h-5 rounded-full bg-[#C2410C] block border-2 border-white shadow-sm" />
+          <div className="flex items-center shrink-0">
+           <img 
+             src="https://res.cloudinary.com/dtkluxukm/image/upload/v1779594136/logo_m4xkrv.jpg" 
+             alt="Naija Diaspora Realtors Logo"
+             className="h-11 w-auto object-contain rounded"
+             referrerPolicy="no-referrer"
+           />
           </div>
           <span className="text-xl font-extrabold tracking-tighter text-navy-regal uppercase">
             Naija Diaspora Realtors
@@ -97,8 +100,7 @@ export default function App() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-navy-regal">Chinedu Obi</h3>
+                <div>Vivian Ekanem</h3>
                   <p className="text-xs font-bold uppercase tracking-wide text-emerald-regal">CEO & Co-Founder</p>
                 </div>
               </div>
