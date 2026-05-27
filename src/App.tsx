@@ -41,21 +41,21 @@ const AUDIT_REGISTRY_ITEMS = [
     id: "p3",
     loc: "",
     // Replace the URL inside the quotes with your custom image link
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80",
+    image: "https://ik.imagekit.io/019999great/pic1.jpg",
     status: ""
   },
   {
     id: "p4",
     loc: "",
     // Replace the URL inside the quotes with your custom image link
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+    image: "https://ik.imagekit.io/019999great/pic2.jpg",
     status: ""
   },
   {
     id: "p5",
     loc: "",
     // Replace the URL inside the quotes with your custom image link
-    image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=600&q=80",
+    image: "https://ik.imagekit.io/019999great/pic3.jpg",
     status: ""
   },
   {
