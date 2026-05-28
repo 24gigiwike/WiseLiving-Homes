@@ -86,7 +86,7 @@ export default function App() {
     e.preventDefault();
     const subject = encodeURIComponent("Consultation Request: Property Investment");
     const body = encodeURIComponent(
-      `Hello Wise Living Homes Team,\n\nI want to request a property investment consultation.\n\nInvestment Profile:\n- Name: ${formData.name}\n- Email: ${formData.email}\n- Phone: ${formData.phone}\n- Desired Investment Type: ${formData.type}\n\nPlease contact me at your earliest convenience.`
+      `Hello WiseLiving Homes and Property LTD. Team,\n\nI want to request a property investment consultation.\n\nInvestment Profile:\n- Name: ${formData.name}\n- Email: ${formData.email}\n- Phone: ${formData.phone}\n- Desired Investment Type: ${formData.type}\n\nPlease contact me at your earliest convenience.`
     );
     window.location.href = `mailto:wiselivinghomes.property@gmail.com?subject=${subject}&body=${body}`;
   };
@@ -100,13 +100,13 @@ export default function App() {
           <div className="flex items-center shrink-0">
            <img 
              src="https://res.cloudinary.com/dtkluxukm/image/upload/v1779970937/WSH_eegptp.jpg" 
-             alt="Wise Living Homes Logo"
+             alt="WiseLiving Homes and Property LTD. Logo"
              className="h-11 w-auto object-contain rounded"
              referrerPolicy="no-referrer"
            />
           </div>
           <span className="text-xl font-extrabold tracking-tighter text-navy-regal uppercase">
-            Wise Living Homes
+            WiseLiving Homes and Property LTD.
           </span>
         </div>
         <div className="hidden md:block text-[10px] opacity-40 uppercase tracking-[0.2em] font-bold">
@@ -172,7 +172,7 @@ export default function App() {
               </div>
               <div>
                 <p className="text-sm md:text-base leading-relaxed text-navy-regal/70 mb-4 font-light">
-                  Vivian Ekanem is the founder of Wise Living Homes, a real estate brand dedicated to helping Nigerians in the diaspora invest safely and confidently in property back home.
+                  Vivian Ekanem is the founder of WiseLiving Homes and Property LTD., a real estate brand dedicated to helping Nigerians in the diaspora invest safely and confidently in property back home.
                 </p>
                 <p className="text-sm md:text-base italic font-semibold text-emerald-regal border-l-2 border-emerald-regal pl-4">
                   Trusted for helping Nigerians in the diaspora invest safely and confidently in property back home.
@@ -187,7 +187,7 @@ export default function App() {
                 About Our Firm
               </h4>
               <p className="text-sm leading-relaxed text-navy-regal/80">
-                At Wise Living Homes, we specialize in offering secure property transactions with zero anxiety. Backed by ground-level site inspectors and professional legal partnerships, we perform complete property auditing so you can invest with bulletproof certainty from anywhere in the world.
+                At WiseLiving Homes and Property LTD., we specialize in offering secure property transactions with zero anxiety. Backed by ground-level site inspectors and professional legal partnerships, we perform complete property auditing so you can invest with bulletproof certainty from anywhere in the world.
               </p>
               
               <div className="mt-6 pt-6 border-t border-art-gray/70">
@@ -271,7 +271,7 @@ export default function App() {
                 Board of Directors
               </h2>
               <p className="text-sm text-navy-regal/50 mt-2 max-w-xl">
-                A distinguished panel of executives, consultants, and legal experts steering Wise Living Homes with absolute integrity and technical expertise.
+                A distinguished panel of executives, consultants, and legal experts steering WiseLiving Homes and Property LTD. with absolute integrity and technical expertise.
               </p>
             </div>
 
@@ -280,12 +280,12 @@ export default function App() {
                 {
                   name: "Mr Joe Samuel Udoh",
                   role: "Chairman",
-                  image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400&q=80"
+                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1779987353/IMG-20260528-WA0128_na1nnf.jpg"
                 },
                 {
                   name: "Consultant Vivian Ekanem",
                   role: "MD/CEO",
-                  image: "https://ik.imagekit.io/019999great/user-02.jpg"
+                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1779987028/IMG-20260528-WA0127_hz3tlr.jpg"
                 },
                 {
                   name: "Bar Bennard",
@@ -300,7 +300,7 @@ export default function App() {
                 {
                   name: "Mrs Okeke Amarachi Grace",
                   role: "Director, Tenants and Landlord Relations",
-                  image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=80"
+                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1779987342/IMG-20260528-WA0130_ksstbr.jpg"
                 },
                 {
                   name: "Mr Augustine Ibanga",
@@ -465,7 +465,7 @@ export default function App() {
       {/* FOOTER */}
       <footer className="py-8 border-t border-art-gray bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-navy-regal/40 text-xs gap-4 font-light">
-          <p>© 2026 Wise Living Homes. All Rights Reserved.</p>
+          <p>© 2026 WiseLiving Homes and Property LTD. All Rights Reserved.</p>
           <p className="uppercase tracking-[0.2em] font-medium text-[10px] text-emerald-regal">Integrity • Presence • Peace of mind</p>
         </div>
       </footer>
