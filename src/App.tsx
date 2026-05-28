@@ -86,27 +86,27 @@ export default function App() {
     e.preventDefault();
     const subject = encodeURIComponent("Consultation Request: Property Investment");
     const body = encodeURIComponent(
-      `Hello Naija Diaspora Realtors Team,\n\nI want to request a property investment consultation.\n\nInvestment Profile:\n- Name: ${formData.name}\n- Email: ${formData.email}\n- Phone: ${formData.phone}\n- Desired Investment Type: ${formData.type}\n\nPlease contact me at your earliest convenience.`
+      `Hello Wise Living Homes Team,\n\nI want to request a property investment consultation.\n\nInvestment Profile:\n- Name: ${formData.name}\n- Email: ${formData.email}\n- Phone: ${formData.phone}\n- Desired Investment Type: ${formData.type}\n\nPlease contact me at your earliest convenience.`
     );
-    window.location.href = `mailto:naijadiasporarealtors@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:wiselivinghomes.property@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
-    <div className="min-h-screen bg-white text-navy-regal flex flex-col selection:bg-orange-regal selection:text-white">
+    <div className="min-h-screen bg-white text-navy-regal flex flex-col selection:bg-orange-regal selection:text-navy-regal">
       {/* HEADER */}
       <header className="h-[70px] w-full px-6 md:px-12 flex items-center justify-between border-b border-art-gray bg-white shrink-0 sticky top-0 z-50 shadow-sm/50">
         <div className="flex items-center gap-3">
           {/* Logo Placeholder combining Navy Blue, Green, and Orange */}
           <div className="flex items-center shrink-0">
            <img 
-             src="https://res.cloudinary.com/dtkluxukm/image/upload/v1779594136/logo_m4xkrv.jpg" 
-             alt="Naija Diaspora Realtors Logo"
+             src="https://res.cloudinary.com/dtkluxukm/image/upload/v1779970937/WSH_eegptp.jpg" 
+             alt="Wise Living Homes Logo"
              className="h-11 w-auto object-contain rounded"
              referrerPolicy="no-referrer"
            />
           </div>
           <span className="text-xl font-extrabold tracking-tighter text-navy-regal uppercase">
-            Naija Diaspora Realtors
+            Wise Living Homes
           </span>
         </div>
         <div className="hidden md:block text-[10px] opacity-40 uppercase tracking-[0.2em] font-bold">
@@ -142,10 +142,10 @@ export default function App() {
             </p>
             <a 
               href="#contact"
-              className="inline-flex items-center gap-3 bg-orange-regal text-white px-8 py-4 font-bold uppercase tracking-widest text-xs hover:brightness-110 shadow-lg shadow-orange-regal/20 transition-all active:scale-95"
+              className="inline-flex items-center gap-3 bg-orange-regal text-navy-regal px-8 py-4 font-bold uppercase tracking-widest text-xs hover:brightness-110 shadow-lg shadow-orange-regal/20 transition-all active:scale-95"
             >
               Start Your Investment
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-navy-regal" />
             </a>
           </div>
         </section>
@@ -172,7 +172,7 @@ export default function App() {
               </div>
               <div>
                 <p className="text-sm md:text-base leading-relaxed text-navy-regal/70 mb-4 font-light">
-                  Vivian Ekanem is the founder of Naija Diaspora Realtors, a real estate brand dedicated to helping Nigerians in the diaspora invest safely and confidently in property back home.
+                  Vivian Ekanem is the founder of Wise Living Homes, a real estate brand dedicated to helping Nigerians in the diaspora invest safely and confidently in property back home.
                 </p>
                 <p className="text-sm md:text-base italic font-semibold text-emerald-regal border-l-2 border-emerald-regal pl-4">
                   Trusted for helping Nigerians in the diaspora invest safely and confidently in property back home.
@@ -187,8 +187,27 @@ export default function App() {
                 About Our Firm
               </h4>
               <p className="text-sm leading-relaxed text-navy-regal/80">
-                At Naija Diaspora Realtors, we specialize in offering secure property transactions with zero anxiety. Backed by ground-level site inspectors and professional legal partnerships, we perform complete property auditing so you can invest with bulletproof certainty from anywhere in the world.
+                At Wise Living Homes, we specialize in offering secure property transactions with zero anxiety. Backed by ground-level site inspectors and professional legal partnerships, we perform complete property auditing so you can invest with bulletproof certainty from anywhere in the world.
               </p>
+              
+              <div className="mt-6 pt-6 border-t border-art-gray/70">
+                <h5 className="text-[11px] font-extrabold uppercase tracking-wider text-navy-regal mb-3">Our Core Business Services</h5>
+                <ul className="space-y-3.5 text-xs text-navy-regal/80">
+                  <li className="flex gap-2">
+                    <span className="font-extrabold text-orange-regal text-sm leading-none">1.</span>
+                    <span>Real estate development, sales, leasing and management of residential and commercial properties.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-extrabold text-orange-regal text-sm leading-none">2.</span>
+                    <span>Facilities management, maintenance, janitorial and property support services.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="font-extrabold text-orange-regal text-sm leading-none">3.</span>
+                    <span>Property consulting, valuation, project management and general contracting services.</span>
+                  </li>
+                </ul>
+              </div>
+
               <div className="mt-6 pt-6 border-t border-art-gray/70 grid grid-cols-2 gap-4 text-xs font-medium text-navy-regal/60">
                 <div>
                   <span className="block text-emerald-regal font-black">100% verified</span> on-site physical check
@@ -238,6 +257,71 @@ export default function App() {
               </div>
             </div>
 
+          </div>
+        </section>
+
+        {/* SECTION 3.5: BOARD OF DIRECTORS (100% width block) */}
+        <section className="w-full py-20 md:py-28 px-6 md:px-12 border-b border-art-gray bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center md:text-left mb-16">
+              <div className="inline-block bg-[#F1F5F9] text-orange-regal text-[10px] font-bold uppercase tracking-widest px-3 py-1 mb-3 rounded-full border border-art-gray">
+                Governance & Leadership
+              </div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-regal tracking-tight">
+                Board of Directors
+              </h2>
+              <p className="text-sm text-navy-regal/50 mt-2 max-w-xl">
+                A distinguished panel of executives, consultants, and legal experts steering Wise Living Homes with absolute integrity and technical expertise.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Mr Joe Samuel Udoh",
+                  role: "Chairman",
+                  image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400&q=80"
+                },
+                {
+                  name: "Consultant Vivian Ekanem",
+                  role: "MD/CEO",
+                  image: "https://ik.imagekit.io/019999great/user-02.jpg"
+                },
+                {
+                  name: "Bar Bennard",
+                  role: "Non Executive Director / Company Secretary",
+                  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80"
+                },
+                {
+                  name: "Mr Oscar Etim",
+                  role: "Vice Chairman and Board Director",
+                  image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&h=400&q=80"
+                },
+                {
+                  name: "Mrs Okeke Amarachi Grace",
+                  role: "Director, Tenants and Landlord Relations",
+                  image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=80"
+                },
+                {
+                  name: "Mr Augustine Ibanga",
+                  role: "Director, Technical Operations and Procurement",
+                  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=400&q=80"
+                }
+              ].map((member, i) => (
+                <div key={i} className="flex flex-col items-center text-center p-6 border border-art-gray rounded-lg bg-[#F8FAFC] shadow-sm/30 hover:shadow-md transition-all duration-300">
+                  <div className="w-24 h-24 rounded-full overflow-hidden border border-emerald-regal shadow-md mb-4 shrink-0 bg-slate-100">
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                  <h3 className="font-extrabold text-navy-regal text-base tracking-tight mb-1">{member.name}</h3>
+                  <p className="text-xs font-bold text-emerald-regal uppercase tracking-wider">{member.role}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -299,7 +383,7 @@ export default function App() {
                   <p className="text-white/80">09064468706</p>
                   <p className="text-white/60">07071969997</p>
                   <span className="block text-emerald-regal font-bold uppercase tracking-wider mt-3 mb-1">Email Info</span>
-                  <p className="text-white/80">naijadiasporarealtors@gmail.com</p>
+                  <p className="text-white/80">wiselivinghomes.property@gmail.com</p>
                 </div>
                 <div>
                   <span className="block text-emerald-regal font-bold uppercase tracking-wider mb-1">Office Location</span>
@@ -366,7 +450,7 @@ export default function App() {
                 </div>
                 <button 
                   type="submit"
-                  className="w-full bg-orange-regal text-white py-3.5 rounded font-bold uppercase text-xs tracking-widest hover:brightness-110 active:scale-[0.98] transition-all shadow-lg shadow-orange-regal/10 mt-4"
+                  className="w-full bg-orange-regal text-navy-regal py-3.5 rounded font-bold uppercase text-xs tracking-widest hover:brightness-110 active:scale-[0.98] transition-all shadow-lg shadow-orange-regal/10 mt-4"
                 >
                   Request Consultation Call
                 </button>
@@ -381,7 +465,7 @@ export default function App() {
       {/* FOOTER */}
       <footer className="py-8 border-t border-art-gray bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-navy-regal/40 text-xs gap-4 font-light">
-          <p>© 2026 Naija Diaspora Realtors. All Rights Reserved.</p>
+          <p>© 2026 Wise Living Homes. All Rights Reserved.</p>
           <p className="uppercase tracking-[0.2em] font-medium text-[10px] text-emerald-regal">Integrity • Presence • Peace of mind</p>
         </div>
       </footer>
