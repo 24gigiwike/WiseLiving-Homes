@@ -15,7 +15,14 @@ import {
   ArrowRight,
   Menu,
   X,
-  MessageCircle
+  MessageCircle,
+  Eye,
+  Target,
+  Building,
+  Wrench,
+  Briefcase,
+  Users,
+  TrendingUp
 } from "lucide-react";
 import { useState, FormEvent } from "react";
 
@@ -252,6 +259,122 @@ export default function App() {
                     <div>
                       <p className="font-bold text-sm uppercase text-white tracking-tight">{item.title}</p>
                       <p className="text-xs text-white/70 mt-0.5 leading-relaxed">{item.sub}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* SECTION 3.2: COMPANY PROFILE (100% width block) */}
+        <section className="w-full py-20 md:py-28 px-6 md:px-12 border-b border-art-gray bg-[#F8FAFC]">
+          <div className="max-w-7xl mx-auto">
+            
+            {/* Header */}
+            <div className="text-center md:text-left mb-16">
+              <div className="inline-block bg-[#F1F5F9] text-emerald-regal text-[10px] font-bold uppercase tracking-widest px-3 py-1 mb-3 rounded-full border border-art-gray">
+                Corporate Profile
+              </div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-regal tracking-tight">
+                Our Company Profile
+              </h2>
+              <p className="text-sm font-bold mt-2 uppercase tracking-wider bg-gradient-to-r from-[#1f8266] to-[#cfc070] bg-clip-text text-transparent w-fit">
+                WiseLiving Homes and Property LTD.
+              </p>
+            </div>
+
+            {/* Vision & Mission Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {/* Vision */}
+              <div className="p-8 border border-art-gray/80 rounded-xl bg-white flex flex-col gap-4 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-[#1f8266]/10 flex items-center justify-center text-[#1f8266]">
+                  <Eye className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-xs font-black uppercase tracking-widest text-[#1f8266] mb-2">Vision Statement</h3>
+                  <p className="text-sm md:text-base text-navy-regal/85 leading-relaxed font-semibold italic">
+                    "To be Nigeria’s most trusted real estate company, making decent, stress-free housing and property management accessible to every family and business."
+                  </p>
+                </div>
+              </div>
+
+              {/* Mission */}
+              <div className="p-8 border border-art-gray/80 rounded-xl bg-white flex flex-col gap-4 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-[#cfc070]/10 flex items-center justify-center text-[#cfc070]">
+                  <Target className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-xs font-black uppercase tracking-widest text-[#cfc070] mb-2">Mission Statement</h3>
+                  <p className="text-sm text-navy-regal/80 leading-relaxed font-light">
+                    "To develop, lease, and manage residential and commercial properties with integrity, deliver professional facility solutions and maintenance, and provide property consulting and project management services. To treat every client, tenant, and investor like family through transparency, excellence, and measurable results."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Core Objectives Section */}
+            <div>
+              <h3 className="text-xs font-black uppercase tracking-[0.2em] text-navy-regal/60 mb-8 border-b border-art-gray pb-4">
+                Core Objectives — Wise Living Homes & Properties Ltd
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  {
+                    num: "01",
+                    title: "Property Management & Leasing",
+                    desc: "Deliver full-service leasing and management for residential and commercial assets, ensuring maximum value for landlords and peace of mind for tenants.",
+                    icon: Building,
+                    colorId: "emerald"
+                  },
+                  {
+                    num: "02",
+                    title: "Real Estate Development & Sales",
+                    desc: "Develop, market, and sell quality residential and commercial property portfolios with professionalism and measurable results.",
+                    icon: TrendingUp,
+                    colorId: "gold"
+                  },
+                  {
+                    num: "03",
+                    title: "Facility Solutions & Maintenance",
+                    desc: "Provide facilities management, maintenance, refurbishment, janitorial and property support services to preserve asset value and ensure operational efficiency.",
+                    icon: Wrench,
+                    colorId: "emerald"
+                  },
+                  {
+                    num: "04",
+                    title: "Property Consulting & Project Management",
+                    desc: "Offer expert property consulting, valuation, and project management advisory services to guide clients in making sound real estate decisions.",
+                    icon: Briefcase,
+                    colorId: "gold"
+                  },
+                  {
+                    num: "05",
+                    title: "Client Trust & Relationships",
+                    desc: "Build long-term trust with landlords, tenants, and investors through transparency, reliability, and client-focused service delivery.",
+                    icon: Users,
+                    colorId: "emerald"
+                  },
+                  {
+                    num: "06",
+                    title: "Strategic Growth & Investment",
+                    desc: "Expand strategically into estate development and real estate investment opportunities that deliver sustainable value.",
+                    icon: TrendingUp,
+                    colorId: "gold"
+                  }
+                ].map((obj, i) => (
+                  <div key={i} className="p-6 border border-art-gray rounded-lg bg-white hover:border-[#1f8266]/30 transition-all duration-300 flex flex-col justify-between group shadow-sm/30">
+                    <div>
+                      <div className="flex justify-between items-start mb-4">
+                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${obj.colorId === 'emerald' ? 'bg-[#1f8266]/10 text-[#1f8266]' : 'bg-[#cfc070]/10 text-[#cfc070]'}`}>
+                          <obj.icon className="w-5 h-5" />
+                        </div>
+                        <span className="text-xs font-black tracking-widest text-[#0F172A]/20">{obj.num}</span>
+                      </div>
+                      <h4 className="font-extrabold text-[#0F172A] text-sm tracking-tight mb-2 uppercase group-hover:text-[#1f8266] transition-colors">{obj.title}</h4>
+                      <p className="text-xs text-navy-regal/60 leading-relaxed font-light">{obj.desc}</p>
                     </div>
                   </div>
                 ))}
