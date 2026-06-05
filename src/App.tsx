@@ -102,24 +102,24 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-navy-regal flex flex-col selection:bg-orange-regal selection:text-navy-regal">
       {/* HEADER */}
-      <header className="h-[70px] w-full px-6 md:px-12 flex items-center justify-between border-b border-art-gray bg-white shrink-0 sticky top-0 z-50 shadow-sm/50">
+      <header className="h-[70px] w-full px-6 md:px-12 flex items-center justify-between border-b border-[#1f8266]/10 bg-gradient-to-r from-[#cfc070] to-[#1f8266] shrink-0 sticky top-0 z-50 shadow-md">
         <div className="flex items-center gap-3">
-          {/* Logo Placeholder combining Navy Blue, Green, and Orange */}
-          <div className="flex items-center shrink-0">
+          {/* Logo Container with white background for maximum visibility */}
+          <div className="flex items-center shrink-0 bg-white p-1.5 rounded shadow-md border border-white/20">
            <img 
              src="https://res.cloudinary.com/dtkluxukm/image/upload/v1779970937/WSH_eegptp.jpg" 
              alt="WiseLiving Homes and Property LTD. Logo"
-             className="h-11 w-auto object-contain rounded"
+             className="h-9 w-auto object-contain rounded"
              referrerPolicy="no-referrer"
            />
           </div>
-          <span className="text-xl font-extrabold tracking-tighter uppercase bg-gradient-to-r from-[#1f8266] to-[#cfc070] bg-clip-text text-transparent">
+          <span className="text-xl font-extrabold tracking-tighter uppercase text-navy-regal">
             WiseLiving Homes and Property LTD.
           </span>
-        </div>
-        <div className="hidden md:block text-[10px] opacity-40 uppercase tracking-[0.2em] font-bold">
-          <span className="text-emerald-regal">Investment Certainty Bureau</span> • Secure Property Solutions
-        </div>
+         </div>
+         <div className="hidden md:block text-[10px] text-white/90 uppercase tracking-[0.2em] font-bold">
+           <span className="text-white">Investment Certainty Bureau</span> • Secure Property Solutions
+         </div>
       </header>
 
       {/* MAIN CONTAINER */}
@@ -167,7 +167,7 @@ export default function App() {
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-emerald-regal shadow-md shrink-0">
                   <img 
-                    src="https://res.cloudinary.com/dtkluxukm/image/upload/v1779987028/IMG-20260528-WA0127_hz3tlr.jpg"
+                    src="https://res.cloudinary.com/dtkluxukm/image/upload/v1780635330/bod2_pdn3zp.jpg"
                     alt="Founder"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
@@ -404,12 +404,12 @@ export default function App() {
                 {
                   name: "Mr Joe Samuel Udoh",
                   role: "Chairman",
-                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1779987353/IMG-20260528-WA0128_na1nnf.jpg"
+                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1780635330/bod1_s8q0xo.jpg"
                 },
                 {
                   name: "Consultant Vivian Ekanem",
                   role: "MD/CEO",
-                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1779987028/IMG-20260528-WA0127_hz3tlr.jpg"
+                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1780635330/bod2_pdn3zp.jpg"
                 },
                 {
                   name: "Bar Bennard",
@@ -424,7 +424,7 @@ export default function App() {
                 {
                   name: "Mrs Okeke Amarachi Grace",
                   role: "Director, Tenants and Landlord Relations",
-                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1779987342/IMG-20260528-WA0130_ksstbr.jpg"
+                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1780635330/bod3_yrwdyq.jpg"
                 },
                 {
                   name: "Mr Augustine Ibanga",
