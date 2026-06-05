@@ -96,7 +96,7 @@ export default function App() {
     const body = encodeURIComponent(
       `Hello WiseLiving Homes and Property LTD. Team,\n\nI want to request a property investment consultation.\n\nInvestment Profile:\n- Name: ${formData.name}\n- Email: ${formData.email}\n- Phone: ${formData.phone}\n- Desired Investment Type: ${formData.type}\n\nPlease contact me at your earliest convenience.`
     );
-    window.location.href = `mailto:wiselivinghomes.property@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@wiselivinghomes.com.ng?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -507,7 +507,7 @@ export default function App() {
                   <p className="text-white/80">09064468706</p>
                   <p className="text-white/60">07071969997</p>
                   <span className="block text-emerald-regal font-bold uppercase tracking-wider mt-3 mb-1">Email Info</span>
-                  <p className="text-white/80">wiselivinghomes.property@gmail.com</p>
+                  <p className="text-white/80">wiselivinghomespropertyltdgmail.com</p>
                 </div>
                 <div>
                   <span className="block text-emerald-regal font-bold uppercase tracking-wider mb-1">Office Location</span>
