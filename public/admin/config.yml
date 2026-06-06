@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: gigiwike/your-repo # Replace gigiwike/your-repo with your actual GitHub username and repository name
+  repo: 24gigiwike/WiseLiving-Homes 
   branch: main # Branch to update on publish
   # To enable local development server access for testing, toggle local_backend to true
   local_backend: true
