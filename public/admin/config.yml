@@ -1,0 +1,36 @@
+# Decap CMS Configuration (Git-Gateway / GitHub Backend)
+# Reference: https://decapcms.org/docs/configuration-options/
+
+backend:
+  name: github
+  repo: gigiwike/your-repo # Replace gigiwike/your-repo with your actual GitHub username and repository name
+  branch: main # Branch to update on publish
+  # To enable local development server access for testing, toggle local_backend to true
+  local_backend: true
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: "homes"
+    label: "Verify & Explore Homes"
+    folder: "src/data/homes"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Location", name: "location", widget: "string", required: true }
+      - { label: "Status", name: "status", widget: "string", default: "Verified", required: true }
+      - { label: "Property Image Link", name: "image", widget: "image", required: true }
+      - { label: "Full Description", name: "desc", widget: "text", required: true }
+
+  - name: "gallery"
+    label: "Site Verification Photo Gallery"
+    folder: "src/data/gallery"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Caption Description", name: "caption", widget: "string", required: true }
+      - { label: "Verification Photo Image Link", name: "image", widget: "image", required: true }
