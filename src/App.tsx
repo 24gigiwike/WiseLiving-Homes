@@ -27,9 +27,9 @@ import {
 import { useState, FormEvent } from "react";
 
 // ==========================================
-// AUDIT REGISTRY CONFIGURATION (DECAP CMS INTEGRATED)
+// AUDIT REGISTRY HARDWARE CONFIGURATION
 // ==========================================
-// The admin can easily post new homes & gallery items using Decap CMS in these structures.
+// Hand-verified listings and on-site evidence logs managed by our audit coordinators.
 const AUDIT_HOMES = [
   {
     id: "h1",
