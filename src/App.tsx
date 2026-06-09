@@ -33,84 +33,59 @@ import { useState, FormEvent } from "react";
 const AUDIT_HOMES = [
   {
     id: "h1",
-    title: "The Regent Court",
-    loc: "Lekki Phase 1, Lagos",
-    image: "https://ik.imagekit.io/019999great/image1.jpg",
+    title: "Gafford Estate",
+    loc: "Ibeju Lekki , Lagos",
+    image: "",
+    isVideo: true,
+    videoUrl: "https://res.cloudinary.com/dtkluxukm/video/upload/v1781006583/Video_from_Web_Design_King_1_t80mo5.mp4",
     status: "Fully Managed",
-    desc: "A premium 4-bedroom terrace duplex development featuring state-of-the-art facility support and 24/7 smart power grid."
+    desc: "Taking you on a tour through our partners estate"
   },
   {
     id: "h2",
-    title: "Jade Gardens Estate",
+    title: "Gafford Estate",
     loc: "Ibeju-Lekki Corridor, Lagos",
-    image: "https://ik.imagekit.io/019999great/image2.jpg",
+    image: "",
+    isVideo: true,
+    videoUrl: "https://res.cloudinary.com/dtkluxukm/video/upload/v1781006567/Video_from_Web_Design_King_mpqbeg.mp4",
     status: "Verified & Titled",
-    desc: "Premium residential serviced plots, fully verified with Certificate of Occupancy, complete coordinate mapping, and physical access roads."
+    desc: "Ongoing housing project"
   },
   {
     id: "h3",
-    title: "Grandview Boulevard",
-    loc: "GRA, Ikeja, Lagos",
-    image: "https://ik.imagekit.io/019999great/pic1.jpg",
-    status: "Diligence Cleared",
-    desc: "Luxury multi-family apartments optimized for high rental yield. Complete land history checked and authenticated by legal experts."
+    title: "Prayer Estate",
+    loc: "Amuwo Odofin, Lagos",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781006504/IMG-20260606-WA0308_gj1gew.jpg",
+    isVideo: false,
+    status: "",
+    desc: "A 3 unit, well crafted and finished 4 bedroom semi detached duplex +1 room BQ attached. Fully fitted kitchen & co"
   },
   {
     id: "h4",
-    title: "Breeze Haven Residences",
-    loc: "Epe Boulevard, Lagos",
-    image: "https://ik.imagekit.io/019999great/pic2.jpg",
+    title: "Offplan 4 bedroom bungalow",
+    loc: "Elerangbe, Ibeju Lekki Lagos",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781006504/IMG-20260530-WA0000_a82nox.jpg",
+    isVideo: false,
     status: "Under Facility Care",
-    desc: "Exquisite eco-friendly villas within a secured gated community. Managed daily by WiseLiving facilities and janitorial teams."
+    desc: "0-3 months outright purchase, 1 year to 5 years installment payment allowed. "
   },
   {
     id: "h5",
-    title: "Peak Point Apartments",
-    loc: "Surulere Residential, Lagos",
-    image: "https://ik.imagekit.io/019999great/pic3.jpg",
-    status: "Lease Active",
-    desc: "Fully occupied, modern commercial and luxury residential apartments providing stress-free monthly returns for landlords abroad."
+    title: "Buknor Estate",
+    loc: "Isolo, Lagos",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781006505/IMG-20260606-WA0314_isa9jb.jpg",
+    isVideo: false,
+    status: "Now letting",
+    desc: "Clean two bedroom flat. Pop ceiling, screeded wall. Price - 2.5M"
   },
   {
     id: "h6",
-    title: "Citadel Smart City",
-    loc: "Sangotedo, Lagos",
-    image: "https://ik.imagekit.io/019999great/image1.jpg",
-    status: "Completed Audit",
-    desc: "An innovative, fully-serviced modern estate. Site inspection check, boundary survey documentation, and drone mapping archived."
-  }
-];
-
-const AUDIT_GALLERY = [
-  {
-    id: "g1",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
-    caption: "On-site GPS Coordinate and Survey Boundary Marking"
-  },
-  {
-    id: "g2",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    caption: "Drone Site Inspection and Topography Mapping"
-  },
-  {
-    id: "g3",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-    caption: "Physical Verification Report Archiving at Lagos Land Registry"
-  },
-  {
-    id: "g4",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
-    caption: "Handover of Duly Executed Deeds of Assignment to Diaspora Partner"
-  },
-  {
-    id: "g5",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
-    caption: "Bi-Weekly Progress Briefing with Verified Photo updates"
-  },
-  {
-    id: "g6",
-    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80",
-    caption: "Comprehensive Legal Title Deed Validation Session"
+    title: "Buknor Estate",
+    loc: "Isolo, Lagos",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781006505/IMG-20260606-WA0312_cndce3.jpg",
+    isVideo: false,
+    status: "Now lettingt",
+    desc: "Clean two bedroom flat. Pop ceiling, screeded wall. Price - 2.5M"
   }
 ];
 
@@ -122,7 +97,7 @@ const fadeIn = {
 };
 
 export default function App() {
-  const [registryTab, setRegistryTab] = useState<"homes" | "gallery">("homes");
+  const [playingVideoUrl, setPlayingVideoUrl] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -492,7 +467,7 @@ export default function App() {
         {/* SECTION 4: VERIFIED INVESTMENTS PROOF (100% width block) */}
         <section className="w-full py-20 md:py-28 px-6 md:px-12 border-b border-art-gray bg-white">
           <div className="max-w-7xl mx-auto">
-            {/* Header & Tab Control Row */}
+            {/* Header Control Row */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
               <div className="text-center md:text-left">
                 <div className="inline-block bg-[#F1F5F9] text-emerald-regal text-[10px] font-bold uppercase tracking-widest px-3 py-1 mb-3 rounded-full border border-art-gray">
@@ -501,92 +476,57 @@ export default function App() {
                 <h2 className="text-3xl md:text-4xl font-extrabold text-navy-regal tracking-tight">
                   Verified On-Ground Investments
                 </h2>
-                <p className="text-sm text-navy-regal/50 mt-2 max-w-xl">
-                  {registryTab === "homes" 
-                    ? "Real property portfolios successfully audited, cataloged, and managed with absolute transparency."
-                    : "Live visual evidence, land registry surveys, and boundary inspections captured by our physical verification field experts."
-                  }
+                <p className="text-sm text-navy-regal/50 mt-2 max-w-xl font-light">
+                  Real property portfolios successfully audited, cataloged, and managed with absolute transparency by our physical verification field experts.
                 </p>
-              </div>
-
-              {/* Tab Toggle Control */}
-              <div className="flex gap-3 justify-center md:justify-end shrink-0">
-                <button
-                  type="button"
-                  onClick={() => setRegistryTab("homes")}
-                  className={`px-6 py-3 rounded text-xs font-black uppercase tracking-wider border transition-all duration-300 flex items-center gap-2 cursor-pointer ${
-                    registryTab === "homes"
-                      ? "bg-navy-regal text-white border-transparent shadow-md"
-                      : "bg-[#F8FAFC] text-navy-regal/60 border-art-gray hover:text-navy-regal hover:bg-white"
-                  }`}
-                  id="tab-explore-homes"
-                >
-                  <Building className="w-3.5 h-3.5" />
-                  Explore Homes
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setRegistryTab("gallery")}
-                  className={`px-6 py-3 rounded text-xs font-black uppercase tracking-wider border transition-all duration-300 flex items-center gap-2 cursor-pointer ${
-                    registryTab === "gallery"
-                      ? "bg-navy-regal text-white border-transparent shadow-md"
-                      : "bg-[#F8FAFC] text-navy-regal/60 border-art-gray hover:text-navy-regal hover:bg-white"
-                  }`}
-                  id="tab-see-gallery"
-                >
-                  <Eye className="w-3.5 h-3.5" />
-                  See Gallery
-                </button>
               </div>
             </div>
 
-            {/* Tab View Render */}
-            {registryTab === "homes" ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                {AUDIT_HOMES.map((prop) => (
-                  <div key={prop.id} className="relative group overflow-hidden border border-art-gray rounded-lg shadow-sm bg-[#F8FAFC]">
-                    <div className="aspect-[4/3] w-full overflow-hidden bg-slate-100">
+            {/* Audit Homes Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {AUDIT_HOMES.map((prop) => (
+                <div key={prop.id} className="relative group overflow-hidden border border-art-gray rounded-lg shadow-sm bg-[#F8FAFC]">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                    {prop.isVideo ? (
+                      <div 
+                        className="relative w-full h-full cursor-pointer"
+                        onClick={() => prop.videoUrl && setPlayingVideoUrl(prop.videoUrl)}
+                      >
+                        <video 
+                          src={prop.videoUrl}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/10 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                          {/* Custom play icon glassmorphic bubble */}
+                          <div className="w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm shadow-md flex items-center justify-center text-navy-regal transform transition-transform group-hover:scale-110 duration-300">
+                            <Video className="w-5 h-5 text-[#0F172A] fill-[#0F172A]/10" />
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
                       <img 
                         src={prop.image}
                         alt={prop.title}
                         className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
                         referrerPolicy="no-referrer"
                       />
-                    </div>
-                    <div className="p-5 bg-white border-t border-art-gray">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-extrabold text-[#0F172A] tracking-tight uppercase">{prop.title}</span>
-                        <span className="text-[9px] bg-[#E0F2FE] text-[#0369A1] font-extrabold px-2 py-0.5 rounded-full uppercase">{prop.status}</span>
-                      </div>
-                      <p className="text-[11px] font-medium text-emerald-regal uppercase tracking-wider mb-2">{prop.loc}</p>
-                      <p className="text-xs text-navy-regal/60 leading-relaxed font-light">{prop.desc}</p>
-                    </div>
+                    )}
                   </div>
-                ))}
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                {AUDIT_GALLERY.map((prop) => (
-                  <div key={prop.id} className="relative group overflow-hidden border border-art-gray rounded-lg shadow-sm bg-[#F8FAFC]">
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
-                      <img 
-                        src={prop.image}
-                        alt={prop.caption}
-                        className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
-                        referrerPolicy="no-referrer"
-                      />
-                      {/* Dark overlay with caption on hover */}
-                      <div className="absolute inset-0 bg-navy-regal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span className="text-white text-xs font-semibold leading-relaxed drop-shadow-sm">{prop.caption}</span>
-                      </div>
+                  <div className="p-5 bg-white border-t border-art-gray">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs font-extrabold text-[#0F172A] tracking-tight uppercase">{prop.title}</span>
+                      <span className="text-[9px] bg-[#E0F2FE] text-[#0369A1] font-extrabold px-2 py-0.5 rounded-full uppercase">{prop.status}</span>
                     </div>
-                    <div className="p-4 bg-white border-t border-art-gray">
-                      <p className="text-xs text-navy-regal/80 font-medium leading-relaxed">{prop.caption}</p>
-                    </div>
+                    <p className="text-[11px] font-medium text-emerald-regal uppercase tracking-wider mb-2">{prop.loc}</p>
+                    <p className="text-xs text-navy-regal/60 leading-relaxed font-light">{prop.desc}</p>
                   </div>
-                ))}
-              </div>
-            )}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -710,6 +650,45 @@ export default function App() {
       >
         <MessageCircle className="w-8 h-8 fill-white text-[#25D366]" />
       </a>
+
+      {/* Video Modal Walkthrough Overlay */}
+      {playingVideoUrl && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 backdrop-blur-md p-4 transition-all duration-300"
+          onClick={() => setPlayingVideoUrl(null)}
+        >
+          {/* Main Modal container */}
+          <div 
+            className="relative w-full max-w-4xl bg-[#0F172A] rounded-xl overflow-hidden shadow-2xl border border-white/10"
+            onClick={(e) => e.stopPropagation()} // Prevent close on modal body click
+          >
+            {/* Header bar / Title / Close button */}
+            <div className="flex items-center justify-between p-4 border-b border-white/5 bg-[#1E293B]/90">
+              <span className="text-xs font-bold text-white/70 uppercase tracking-widest flex items-center gap-2">
+                <Video className="w-4 h-4 text-orange-regal" />
+                Live Property Video Walkthrough
+              </span>
+              <button 
+                onClick={() => setPlayingVideoUrl(null)}
+                className="p-1.5 rounded bg-white/5 hover:bg-white/10 text-white/70 hover:text-white transition-all cursor-pointer"
+                title="Close Video"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            
+            {/* Video Player wrapper */}
+            <div className="relative aspect-video w-full bg-black">
+              <video 
+                src={playingVideoUrl}
+                controls
+                autoPlay
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
