@@ -20,14 +20,17 @@ content:
         type: boolean
         default: false
       - name: videoUrl
-        label: "Video URL (Cloudinary / MP4 link - if Video)"
-        type: string
+        label: "Upload Video File (MP4)"
+        type: image
       - name: image
-        label: "Photo Image URL (if Photo)"
-        type: string
+        label: "Upload Photo Image"
+        type: image
       - name: title
         label: Title
         type: string
       - name: loc
         label: Location
         type: string
+      - name: desc
+        label: Description
+        type: text
