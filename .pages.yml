@@ -1,6 +1,3 @@
-# Pages CMS Configuration Configuration
-# Learn more: https://pagescms.org/docs/configuration
-
 media:
   input: public/images
   output: /images
@@ -8,6 +5,7 @@ media:
 content:
   - name: audit_homes
     label: Audit Registry
+    type: collection
     path: src/data/audit_homes/{id}.json
     view:
       primary: title
@@ -22,10 +20,10 @@ content:
         type: boolean
         default: false
       - name: videoUrl
-        label: Video URL (Cloudinary / MP4 link - if Video)
+        label: "Video URL (Cloudinary / MP4 link - if Video)"
         type: string
       - name: image
-        label: Photo Image URL (if Photo)
+        label: "Photo Image URL (if Photo)"
         type: string
       - name: title
         label: Title
@@ -33,9 +31,3 @@ content:
       - name: loc
         label: Location
         type: string
-      - name: status
-        label: Status
-        type: string
-      - name: desc
-        label: Description
-        type: text
