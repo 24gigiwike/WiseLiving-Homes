@@ -442,6 +442,10 @@ export default function App() {
                         className="relative w-full h-full cursor-pointer"
                         onClick={() => prop.videoUrl && setPlayingVideoUrl(prop.videoUrl)}
                       >
+                        {/* 
+                          The videoUrl is pulled directly as a raw path string (e.g., '/images/filename.mp4').
+                          Vite serves files in the public directory directly from the root-relative path.
+                        */}
                         <video 
                           src={prop.videoUrl}
                           autoPlay
@@ -453,11 +457,15 @@ export default function App() {
                         <div className="absolute inset-0 bg-black/10 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
                           {/* Custom play icon glassmorphic bubble */}
                           <div className="w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm shadow-md flex items-center justify-center text-navy-regal transform transition-transform group-hover:scale-110 duration-300">
-                            <Video className="w-5 h-5 text-[#0F172A] fill-[#0F172A]/10" />
+                             <Video className="w-5 h-5 text-[#0F172A] fill-[#0F172A]/10" />
                           </div>
                         </div>
                       </div>
                     ) : (
+                      /* 
+                        The image is pulled directly using the exact '/images/filename.jpg' path string 
+                        stored in the JSON, serving it relative to the root without bundling or transformation.
+                      */
                       <img 
                         src={prop.image}
                         alt={prop.title}
