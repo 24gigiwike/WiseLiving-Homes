@@ -29,65 +29,15 @@ import { useState, FormEvent } from "react";
 // ==========================================
 // AUDIT REGISTRY HARDWARE CONFIGURATION
 // ==========================================
-// Hand-verified listings and on-site evidence logs managed by our audit coordinators.
-const AUDIT_HOMES = [
-  {
-    id: "h1",
-    title: "Gafford Estate",
-    loc: "Ibeju Lekki , Lagos",
-    image: "",
-    isVideo: true,
-    videoUrl: "https://res.cloudinary.com/dtkluxukm/video/upload/v1781006583/Video_from_Web_Design_King_1_t80mo5.mp4",
-    status: "Fully Managed",
-    desc: "Taking you on a tour through our partners estate"
-  },
-  {
-    id: "h2",
-    title: "Gafford Estate",
-    loc: "Ibeju-Lekki Corridor, Lagos",
-    image: "",
-    isVideo: true,
-    videoUrl: "https://res.cloudinary.com/dtkluxukm/video/upload/v1781006567/Video_from_Web_Design_King_mpqbeg.mp4",
-    status: "Verified & Titled",
-    desc: "Ongoing housing project"
-  },
-  {
-    id: "h3",
-    title: "Prayer Estate",
-    loc: "Amuwo Odofin, Lagos",
-    image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781006504/IMG-20260606-WA0308_gj1gew.jpg",
-    isVideo: false,
-    status: "",
-    desc: "A 3 unit, well crafted and finished 4 bedroom semi detached duplex +1 room BQ attached. Fully fitted kitchen & co"
-  },
-  {
-    id: "h4",
-    title: "Offplan 4 bedroom bungalow",
-    loc: "Elerangbe, Ibeju Lekki Lagos",
-    image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781006504/IMG-20260530-WA0000_a82nox.jpg",
-    isVideo: false,
-    status: "Under Facility Care",
-    desc: "0-3 months outright purchase, 1 year to 5 years installment payment allowed. "
-  },
-  {
-    id: "h5",
-    title: "Buknor Estate",
-    loc: "Isolo, Lagos",
-    image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781006505/IMG-20260606-WA0314_isa9jb.jpg",
-    isVideo: false,
-    status: "Now letting",
-    desc: "Clean two bedroom flat. Pop ceiling, screeded wall. Price - 2.5M"
-  },
-  {
-    id: "h6",
-    title: "Buknor Estate",
-    loc: "Isolo, Lagos",
-    image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781006505/IMG-20260606-WA0312_cndce3.jpg",
-    isVideo: false,
-    status: "Now lettingt",
-    desc: "Clean two bedroom flat. Pop ceiling, screeded wall. Price - 2.5M"
-  }
-];
+// Dynamically loaded properties managed via Pages CMS inside /src/data/audit_homes
+const auditHomeModules = (import.meta as any).glob("./data/audit_homes/*.json", { eager: true });
+const AUDIT_HOMES = Object.values(auditHomeModules)
+  .map((mod: any) => mod.default || mod)
+  .sort((a: any, b: any) => {
+    const idA = String(a.id || "");
+    const idB = String(b.id || "");
+    return idA.localeCompare(idB, undefined, { numeric: true, sensitivity: "base" });
+  });
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
