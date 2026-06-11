@@ -477,7 +477,7 @@ export default function App() {
                   <div className="p-5 bg-white border-t border-art-gray">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-xs font-extrabold text-[#0F172A] tracking-tight uppercase">{prop.title}</span>
-                      <span className="text-[9px] bg-[#E0F2FE] text-[#0369A1] font-extrabold px-2 py-0.5 rounded-full uppercase">{prop.status}</span>
+                      <span className="text-[9px] bg-[#E0F2FE] text-[#0369A1] font-extrabold px-2 py-0.5 rounded-full uppercase">{prop.status || "Verified"}</span>
                     </div>
                     <p className="text-[11px] font-medium text-emerald-regal uppercase tracking-wider mb-2">{prop.loc}</p>
                     <p className="text-xs text-navy-regal/60 leading-relaxed font-light">{prop.desc}</p>

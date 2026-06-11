@@ -6,7 +6,7 @@ content:
   - name: audit_homes
     label: Audit Registry
     type: collection
-    path: src/data/audit_homes/{slug}.json
+    path: src/data/audit_homes/{id}.json
     view:
       primary: title
       description: desc
