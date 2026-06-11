@@ -5,7 +5,7 @@ media:
   input: public/images
   output: /images
 
-collections:
+content:
   - name: audit_homes
     label: Audit Registry
     path: src/data/audit_homes/{id}.json
