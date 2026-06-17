@@ -78,7 +78,7 @@ export default function App() {
              referrerPolicy="no-referrer"
            />
           </div>
-          <span className="text-xl font-extrabold tracking-tighter uppercase text-navy-regal">
+          <span className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight uppercase text-navy-regal select-none">
             WiseLiving Homes and Property LTD.
           </span>
          </div>
@@ -91,7 +91,7 @@ export default function App() {
       <main className="w-full">
         
         {/* SECTION 1: HERO (100% width block) */}
-        <section className="relative w-full min-h-[70vh] md:min-h-[80vh] flex flex-col justify-center border-b border-art-gray py-24 px-6 md:px-12 overflow-hidden bg-[#0F172A]">
+        <section className="relative w-full min-h-[70vh] md:min-h-[80vh] flex flex-col justify-center border-b border-art-gray py-24 px-6 md:px-12 overflow-hidden bg-slate-50">
           {/* Background Cover Image with high resolution luxury home placeholder */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700 hover:scale-105"
@@ -99,9 +99,6 @@ export default function App() {
               backgroundImage: "url('https://res.cloudinary.com/dtkluxukm/image/upload/v1781662225/hero_cjemw0.jpg')",
             }}
           />
-          {/* Dual-layer luxurious overlay: a deep dark overlay for typography contrast and a branded gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0F172A]/40 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1F8266]/10 via-transparent to-[#0F172A]/60" />
           
           <div className="max-w-7xl mx-auto w-full relative z-10">
             <div className="inline-block bg-[#1F8266] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 mb-6 shadow-sm">
@@ -110,11 +107,11 @@ export default function App() {
             <motion.h1 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-4xl md:text-5xl xl:text-6xl font-black mb-6 leading-[1.1] text-balance text-white tracking-tight drop-shadow-sm"
+              className="text-4xl md:text-5xl xl:text-6xl font-black mb-6 leading-[1.1] text-balance text-black tracking-tight"
             >
               Housing solutions, Property Management, Real Estate Consultancy, Property Acquisition, and Investment Advisory
             </motion.h1>
-            <p className="text-lg md:text-2xl text-slate-200 mb-10 font-light italic max-w-2xl leading-relaxed drop-shadow-sm">
+            <p className="text-lg md:text-2xl text-black mb-10 font-medium italic max-w-2xl leading-relaxed">
               "We handle the uncertainty. You get the keys."
             </p>
             <a 
