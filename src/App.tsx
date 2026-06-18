@@ -67,10 +67,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-navy-regal flex flex-col selection:bg-orange-regal selection:text-navy-regal">
       {/* HEADER */}
-      <header className="h-[70px] w-full px-6 md:px-12 flex items-center justify-between border-b border-[#1f8266]/10 bg-gradient-to-r from-[#cfc070] to-[#1f8266] shrink-0 sticky top-0 z-50 shadow-md">
+      <header className="h-[70px] w-full px-4 sm:px-6 md:px-12 flex items-center justify-between bg-[#1f8266] shrink-0 sticky top-0 z-50 border-b border-white/5 shadow-md">
         <div className="flex items-center gap-3">
           {/* Logo Container with white background for maximum visibility */}
-          <div className="flex items-center shrink-0 bg-white p-1.5 rounded shadow-md border border-white/20">
+          <div className="flex items-center shrink-0 bg-white p-1.5 rounded shadow border border-white/10">
            <img 
              src="https://res.cloudinary.com/dtkluxukm/image/upload/v1779970937/WSH_eegptp.jpg" 
              alt="WiseLiving Homes and Property LTD. Logo"
@@ -78,11 +78,16 @@ export default function App() {
              referrerPolicy="no-referrer"
            />
           </div>
-          <span className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight uppercase text-navy-regal select-none">
-            WiseLiving Homes and Property LTD.
-          </span>
+          <div className="flex flex-col justify-center leading-none select-none">
+            <span className="font-playfair font-normal text-white text-[38px] sm:text-3xl md:text-4xl tracking-tight leading-none">
+              WiseLiving
+            </span>
+            <span className="font-montserrat font-extrabold text-[#cfc070] text-[13px] sm:text-[11px] md:text-[12px] tracking-[0.14em] uppercase leading-none mt-1">
+              HOMES AND PROPERTY LTD.
+            </span>
+          </div>
          </div>
-         <div className="hidden md:block text-[10px] text-white/90 uppercase tracking-[0.2em] font-bold">
+         <div className="hidden md:block text-[10px] text-white/80 uppercase tracking-[0.2em] font-semibold">
            <span className="text-white">Investment Certainty Bureau</span> • Secure Property Solutions
          </div>
       </header>
