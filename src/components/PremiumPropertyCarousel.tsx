@@ -215,7 +215,7 @@ export default function PremiumPropertyCarousel() {
           id="carousel-btn-prev"
           onClick={handlePrev}
           aria-label="Previous Slide"
-          className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 bg-slate-950/40 backdrop-blur-md text-white hover:bg-[#cfc070] hover:border-[#cfc070] hover:text-slate-950 transition-all duration-300 shadow-md sm:opacity-0 sm:group-hover:opacity-100 transform active:scale-95"
+          className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 bg-transparent sm:bg-slate-950/40 backdrop-blur-none sm:backdrop-blur-md text-white hover:bg-[#cfc070] hover:border-[#cfc070] hover:text-slate-950 transition-all duration-300 shadow-md sm:opacity-0 sm:group-hover:opacity-100 transform active:scale-95"
         >
           <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 stroke-[2.5]" />
         </button>
@@ -224,7 +224,7 @@ export default function PremiumPropertyCarousel() {
           id="carousel-btn-next"
           onClick={handleNext}
           aria-label="Next Slide"
-          className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 bg-slate-950/40 backdrop-blur-md text-white hover:bg-[#cfc070] hover:border-[#cfc070] hover:text-slate-950 transition-all duration-300 shadow-md sm:opacity-0 sm:group-hover:opacity-100 transform active:scale-95"
+          className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 bg-transparent sm:bg-slate-950/40 backdrop-blur-none sm:backdrop-blur-md text-white hover:bg-[#cfc070] hover:border-[#cfc070] hover:text-slate-950 transition-all duration-300 shadow-md sm:opacity-0 sm:group-hover:opacity-100 transform active:scale-95"
         >
           <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 stroke-[2.5]" />
         </button>
