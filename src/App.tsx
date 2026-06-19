@@ -7,6 +7,7 @@ import { motion } from "motion/react";
 import { 
   ShieldCheck, 
   MapPin, 
+  Home,
   FileCheck, 
   Video, 
   Phone, 
@@ -67,29 +68,73 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-navy-regal flex flex-col selection:bg-orange-regal selection:text-navy-regal">
       {/* HEADER */}
-      <header className="h-[70px] w-full px-4 sm:px-6 md:px-12 flex items-center justify-between bg-[#1f8266] shrink-0 sticky top-0 z-50 border-b border-white/5 shadow-md">
-        <div className="flex items-center gap-3">
-          {/* Logo Container with white background for maximum visibility */}
-          <div className="flex items-center shrink-0 bg-white p-1.5 rounded shadow border border-white/10">
-           <img 
-             src="https://res.cloudinary.com/dtkluxukm/image/upload/v1779970937/WSH_eegptp.jpg" 
-             alt="WiseLiving Homes and Property LTD. Logo"
-             className="h-9 w-auto object-contain rounded"
-             referrerPolicy="no-referrer"
-           />
+      <header className="w-full bg-[#1f8266] shrink-0 sticky top-0 z-50 border-b border-[#cfc070]/15 shadow-lg py-3 md:py-4.5 transition-all duration-300">
+        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-12 flex flex-col gap-3">
+          
+          {/* Top Section */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3.5 sm:gap-5 md:gap-6">
+              {/* Logo Container with white background for maximum visibility */}
+              <div className="flex items-center shrink-0 bg-white p-1.5 sm:p-2 rounded-xl shadow-md border border-white/15">
+                <img 
+                  src="https://res.cloudinary.com/dtkluxukm/image/upload/v1779970937/WSH_eegptp.jpg" 
+                  alt="WiseLiving Homes and Property LTD. Logo"
+                  className="h-9 xs:h-11 sm:h-12 md:h-15 w-auto object-contain rounded-lg"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+
+              {/* Thin Vertical Gold Divider */}
+              <div className="h-9 xs:h-11 sm:h-12 md:h-15 w-[1.5px] bg-[#cfc070]/40 shrink-0 self-center" />
+
+              {/* Brand Typography Block */}
+              <div className="flex flex-col justify-center select-none leading-none">
+                <span className="font-playfair font-extrabold text-white text-[32px] xs:text-[36px] sm:text-4xl md:text-5xl lg:text-[52px] tracking-tight leading-[1.05] drop-shadow-sm">
+                  WiseLiving
+                </span>
+                <span className="font-montserrat font-bold text-[#cfc070] text-[9px] xs:text-[10px] sm:text-[11.5px] md:text-sm tracking-[0.15em] sm:tracking-[0.2em] uppercase leading-none mt-1 sm:mt-1.5">
+                  HOMES AND PROPERTY LTD.
+                </span>
+              </div>
+            </div>
+
+            {/* Desktop Bureau Stamp */}
+            <div className="hidden lg:block text-right select-none pl-4">
+              <span className="text-[9px] text-[#cfc070]/75 uppercase tracking-[0.2em] block leading-none mb-1">
+                SECURE PROPERTY SOLUTIONS
+              </span>
+              <span className="text-xs font-semibold text-white tracking-widest uppercase">
+                Investment Certainty Bureau
+              </span>
+            </div>
           </div>
-          <div className="flex flex-col justify-center leading-none select-none">
-            <span className="font-playfair font-normal text-white text-[38px] sm:text-3xl md:text-4xl tracking-tight leading-none">
-              WiseLiving
-            </span>
-            <span className="font-montserrat font-extrabold text-[#cfc070] text-[13px] sm:text-[11px] md:text-[12px] tracking-[0.14em] uppercase leading-none mt-1">
-              HOMES AND PROPERTY LTD.
-            </span>
+
+          {/* Thin Horizontal Divider */}
+          <hr className="border-t border-[#cfc070]/20 w-full" />
+
+          {/* Bottom Section - Premium Trust and Value Strip */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 sm:gap-x-6 gap-y-1.5 text-[10.5px] sm:text-xs md:text-sm font-semibold select-none leading-none py-0.5">
+            <div className="flex items-center gap-1.5 sm:gap-2 text-white hover:text-[#cfc070] transition-colors duration-200">
+              <Home className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#cfc070] shrink-0" />
+              <span className="font-montserrat tracking-wide">Quality Homes</span>
+            </div>
+            
+            <div className="h-3 w-[1px] bg-[#cfc070]/30 hidden xs:block" />
+            
+            <div className="flex items-center gap-1.5 sm:gap-2 text-white hover:text-[#cfc070] transition-colors duration-200">
+              <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#cfc070] shrink-0" />
+              <span className="font-montserrat tracking-wide">Prime Locations</span>
+            </div>
+            
+            <div className="h-3 w-[1px] bg-[#cfc070]/30 hidden xs:block" />
+            
+            <div className="flex items-center gap-1.5 sm:gap-2 text-white hover:text-[#cfc070] transition-colors duration-200">
+              <ShieldCheck className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#cfc070] shrink-0" />
+              <span className="font-montserrat tracking-wide">Trusted Service</span>
+            </div>
           </div>
-         </div>
-         <div className="hidden md:block text-[10px] text-white/80 uppercase tracking-[0.2em] font-semibold">
-           <span className="text-white">Investment Certainty Bureau</span> • Secure Property Solutions
-         </div>
+
+        </div>
       </header>
 
       {/* MAIN CONTAINER */}
