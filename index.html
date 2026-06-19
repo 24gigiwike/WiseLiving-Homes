@@ -8,6 +8,81 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Built By Agency Credit Section -->
+<div class="wl-agency-credit">
+  <span class="wl-built-text">Built by</span>
+  
+  <a href="#" target="_blank" class="wl-agency-link">
+    <img 
+      src="https://res.cloudinary.com/dtkluxukm/image/upload/v1781877628/9_iypiw1.png" 
+      alt="Agency Logo"
+      class="wl-agency-logo"
+    />
+  </a>
+</div>
+
+<style>
+/* Scoped only to WiseLiving agency credit section */
+
+.wl-agency-credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+  padding: 15px 0;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.wl-built-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.5px;
+  font-family: inherit;
+}
+
+.wl-agency-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.wl-agency-logo {
+  max-width: 110px;
+  max-height: 35px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.wl-agency-logo:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+  .wl-agency-credit {
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .wl-built-text {
+    font-size: 12px;
+  }
+
+  .wl-agency-logo {
+    max-width: 90px;
+    max-height: 30px;
+  }
+
+}
+
+</style>
   </body>
 </html>
 
