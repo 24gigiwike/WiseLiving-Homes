@@ -55,7 +55,7 @@ export default function PremiumPropertyCarousel() {
     },
     {
       id: 6,
-      url: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781854698/IMG-20260619-WA0053_kqjjnr.jpg",
+      url: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781864653/siteraw_orcrxt.jpg",
       title: "Premium Modern Apartments",
       subtitle: "Breathtaking sky terraces and stylish apartment modules with outstanding facilities.",
       badge: "METROPOLITAN RESIDENCE",
