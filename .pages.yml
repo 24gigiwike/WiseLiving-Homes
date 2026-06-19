@@ -7,6 +7,8 @@ content:
     label: Audit Registry
     type: collection
     path: src/data/audit_homes
+    format: json
+    filename: "{fields.id}"
     view:
       primary: title
       description: desc
