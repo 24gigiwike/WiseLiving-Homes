@@ -8,15 +8,11 @@ content:
     type: collection
     path: src/data/audit_homes
     format: json
-    filename: "{fields.id}"
-    view:
-      primary: title
-      description: desc
+    filename: "{id}.json"
     fields:
       - name: id
         label: Internal ID
         type: string
-        default: "h7"
       - name: isVideo
         label: "Is Video? (Checked: Video, Unchecked: Photo)"
         type: boolean
