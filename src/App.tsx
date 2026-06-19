@@ -26,6 +26,7 @@ import {
   TrendingUp
 } from "lucide-react";
 import { useState, FormEvent } from "react";
+import PremiumPropertyCarousel from "./components/PremiumPropertyCarousel";
 
 // ==========================================
 // AUDIT REGISTRY HARDWARE CONFIGURATION
@@ -139,6 +140,9 @@ export default function App() {
 
       {/* MAIN CONTAINER */}
       <main className="w-full">
+        
+        {/* PREMIUM PROPERTY SHOWCASE CAROUSEL */}
+        <PremiumPropertyCarousel />
         
         {/* SECTION 1: HERO (100% width block) */}
         <section className="relative w-full min-h-[70vh] md:min-h-[80vh] flex flex-col justify-center border-b border-art-gray py-24 px-6 md:px-12 overflow-hidden bg-slate-50">
