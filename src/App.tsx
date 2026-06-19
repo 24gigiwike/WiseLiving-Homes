@@ -68,7 +68,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-navy-regal flex flex-col selection:bg-orange-regal selection:text-navy-regal">
       {/* HEADER */}
-      <header className="w-full bg-[#1f8266] shrink-0 sticky top-0 z-50 border-b border-[#cfc070]/15 shadow-lg py-3 md:py-4.5 transition-all duration-300">
+      <header className="w-full bg-[#1f8266] shrink-0 border-b border-[#cfc070]/15 shadow-lg py-3 md:py-4.5">
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-12 flex flex-col gap-3">
           
           {/* Top Section */}
