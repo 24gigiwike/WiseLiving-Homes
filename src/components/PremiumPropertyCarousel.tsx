@@ -15,7 +15,7 @@ export default function PremiumPropertyCarousel() {
   const slides: CarouselSlide[] = [
     {
       id: 1,
-      url: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781854699/IMG-20260619-WA0056_a782ga.jpg",
+      url: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781869717/carousel_aeldpq.jpg",
       title: "Quality Homes. Prime Locations.",
       subtitle: "Exquisite architectural masterpieces tailored to your elevated lifestyle.",
       badge: "ULTRA LUXURY VILLA",
