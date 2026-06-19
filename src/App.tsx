@@ -447,9 +447,9 @@ export default function App() {
                   image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1780635330/bod3_yrwdyq.jpg"
                 },
                 {
-                  name: "Mr Augustine Ibanga",
-                  role: "Director, Technical Operations and Procurement",
-                  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=400&q=80"
+                  name: "Engr. Frankiln Akan",
+                  role: "Structural Engineer",
+                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1781877355/Franklin0_tsmwjk.jpg"
                 }
               ].map((member, i) => (
                 <div key={i} className="flex flex-col items-center text-center p-6 border border-art-gray rounded-lg bg-[#F8FAFC] shadow-sm/30 hover:shadow-md transition-all duration-300">
