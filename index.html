@@ -22,62 +22,50 @@
 </div>
 
 <style>
-/* Scoped only to WiseLiving agency credit section */
+/* Scoped WiseLiving agency credit */
 
 .wl-agency-credit {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-top: 25px;
-  padding: 15px 0;
-  width: 100%;
-  opacity: 0.9;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 8px 0;
+  opacity: 0.8;
 }
 
 .wl-built-text {
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 500;
-  color: 000;
-  letter-spacing: 0.5px;
-  font-family: inherit;
-}
-
-.wl-agency-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+  color: rgba(0,0,0,0.65);
+  letter-spacing: 0.3px;
 }
 
 .wl-agency-logo {
-  max-width: 110px;
-  max-height: 35px;
+  max-width: 65px;
+  max-height: 22px;
   width: auto;
   height: auto;
   object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.wl-agency-logo:hover {
-  transform: translateY(-2px);
 }
 
 
-/* Mobile Responsive */
+/* Mobile */
 @media (max-width: 600px) {
 
   .wl-agency-credit {
-    gap: 8px;
-    padding: 12px 0;
+    gap: 5px;
+    margin-top: 10px;
+    padding: 6px 0;
   }
 
   .wl-built-text {
-    font-size: 12px;
+    font-size: 9px;
   }
 
   .wl-agency-logo {
-    max-width: 90px;
-    max-height: 30px;
+    max-width: 55px;
+    max-height: 18px;
   }
 
 }
