@@ -19,7 +19,7 @@ content:
         default: false
       - name: videoUrl
         label: "Upload Video File (MP4)"
-        type: image
+        type: file
       - name: image
         label: "Upload Photo Image"
         type: image
