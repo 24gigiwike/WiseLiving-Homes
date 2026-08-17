@@ -432,9 +432,9 @@ export default function App() {
                   image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1780635330/bod2_pdn3zp.jpg"
                 },
                 {
-                  name: "Bar Bennard",
-                  role: "Non Executive Director / Company Secretary",
-                  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80"
+                  name: "Barr Asuka Ndego",
+                  role: "Lawyer",
+                  image: "https://res.cloudinary.com/dtkluxukm/image/upload/v1786955481/wlhstaff_d4vsiv.jpg"
                 },
                 {
                   name: "Mrs Okeke Amarachi Grace",
